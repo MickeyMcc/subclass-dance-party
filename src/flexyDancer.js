@@ -3,7 +3,7 @@ var FlexyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
-  this.timeBetweenSteps *= 3;
+  this.timeBetweenSteps *= 4;
   this.$node.addClass('flexyDancer');
   // return blinkyDancer;
 };
@@ -31,8 +31,9 @@ FlexyDancer.prototype.step = function() {
 FlexyDancer.prototype.flex = function() { 
   setTimeout(this.flex.bind(this), this.timeBetweenSteps);
 
-  var height = Math.floor(Math.random()* 20);
-  var width = Math.floor(Math.random()* 60);
+  var height = Math.floor(Math.random()* 100);
+  width = 2 * height;
+  //var width = Math.floor(Math.random()* 60);
   var newTop = Math.floor(Math.random()*1100);
   var newLeft = Math.floor(Math.random()*1900);
 

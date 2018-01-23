@@ -1,6 +1,6 @@
 // Creates and returns a new dancer object that can step
 var Ship = function(top, left, timeBetweenSteps, lineUpSpot) {
-  this.timeBetweenSteps = timeBetweenSteps;
+  this.timeBetweenSteps = 2 * timeBetweenSteps;
   this.top = top;
   this.left = left;
   this.lineUpSpot = lineUpSpot;
@@ -21,7 +21,6 @@ Ship.prototype.setPosition = function(top, left) {
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/
   //
-  console.log('im trying');
   var styleSettings = {
     top: top,
     left: left
@@ -44,6 +43,6 @@ Ship.prototype.lineUp = function() {
     top : 450,
     left : this.lineUpSpot
   });
-  this.step.bind(this);
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 

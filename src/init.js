@@ -2,9 +2,20 @@ $(document).ready(function() {
   window.dancers = [];
   var nextWidth = 100;
 
-  $('body .ship').on('click', function(event) {
+  $('body').on('click', '.ship', function(event) {
     console.log('boom');
-    $(this).toggle();
+
+    $(this).addClass('explosion');
+
+    $(this).animate({
+      height: 0,
+      width: 0
+    }, 2000);
+
+    setTimeout(function() {
+      $(this).toggle().bind(this);
+    }, 3000);
+    
   });
 
   $('.lineUp').on('click', function(event) {

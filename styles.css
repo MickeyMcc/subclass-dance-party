@@ -21,7 +21,9 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .redBlinky {
-  border:10px solid red;
+  height : 50px;
+  width : 50px;
+  content: url('src/star.jpg');
 }
 
 .dancer{
@@ -29,7 +31,15 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-.greenBlinky {
-  border:10px solid green;
+.starDestoyer {
   border-radius: 0; 
+  height : 20;
+  width : 40;
+  content: url('src/starDestoyer.png');
+}
+
+.flexyDancer {
+  width : 30px;
+  height: 10px;
+  border : 5px solid blue;
 }

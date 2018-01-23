@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Object Dance Party</title>
+    <title>Intergalactic Dance Battle</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
-    <script src="src/dancer.js"></script>
-    <script src="src/blinkyDancer.js"></script>
+    <script src="src/Ship.js"></script>
+    <script src="src/Enterprise.js"></script>
     <script src="src/starDestoyer.js"></script>
-    <script src="src/flexyDancer.js"></script>
+    <script src="src/Falcon.js"></script>
   </head>
   <body>
     <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">Captain on bridge!</a>    
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="StarDestoyer">INCOMING STAR DESTOYER</a> 
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="FlexyDancer">In Under Twelve Parsecs!</a>  </div>
+      <span id="title">Intergalactic Dance Battle</span>
+      <a href="#" id = "enterpriseButton" class="addShipButton" data-dancer-maker-function-name="Enterprise">Captain on bridge!</a>    
+      <a href="#" id = "destoyerButton" class="addShipButton" data-dancer-maker-function-name="StarDestoyer">INCOMING STAR DESTOYER</a> 
+      <a href="#" id = "falconButton" class="addShipButton" data-dancer-maker-function-name="Falcon">In Under Twelve Parsecs!</a>  </div>
+      <a href="#" class="lineUp"> Line Up </a> 
     <script src="src/init.js"></script>
   </body>
 </html>

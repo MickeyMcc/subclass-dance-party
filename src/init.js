@@ -1,7 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
   var nextWidth = 100;
-
+  var explosionCount = 0;
   $('body').on('click', '.ship', function(event) {
     console.log('boom');
 
@@ -16,6 +16,8 @@ $(document).ready(function() {
       $(this).toggle().bind(this);
     }, 3000);
     
+    explosionCount++;
+    $('#explosionCount').text( 'Explosions : ' + explosionCount);
   });
 
   $('.lineUp').on('click', function(event) {

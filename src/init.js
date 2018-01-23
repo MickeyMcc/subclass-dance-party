@@ -1,6 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
-  var nextWidth = 100;
+  var nextWidth = 10;
   var explosionCount = 0;
   $('body').on('click', '.ship', function(event) {
     console.log('boom');
@@ -19,6 +19,8 @@ $(document).ready(function() {
     explosionCount++;
     $('#explosionCount').text( 'Explosions : ' + explosionCount);
   });
+
+
 
   $('.lineUp').on('click', function(event) {
     console.log('line up!');
@@ -57,7 +59,7 @@ $(document).ready(function() {
       Math.random() * 1000,
       nextWidth
     );
-    nextWidth += 200;
+    nextWidth = (nextWidth + 100) % 1600;
     $('body').append(dancer.$node);
     window.dancers.push(dancer.$node);
   });

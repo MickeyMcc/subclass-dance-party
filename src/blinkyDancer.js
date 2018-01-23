@@ -7,6 +7,8 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   //console.log(constructor.step);
   //this.oldStep = makeDancer.prototype.step;
   //console.log(this.oldStep);
+  this.$node.addClass('redBlinky');
+
   this.timeBetweenSteps *= 5;
   // return blinkyDancer;
 };
